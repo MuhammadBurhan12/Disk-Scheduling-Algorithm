@@ -39,7 +39,78 @@ Disk Response Time<br>
 It is the average of time spent by each request waiting for the IO operation.
 This repository contains implementations of various disk scheduling algorithms used in operating systems for efficient disk I/O operations. The implemented algorithms include F-SCAN, RSS (Rotational Shortest Seek), and n-step SCAN.
 
+# Introduction
 
+This project aims to simulate and visualize the working of three disk scheduling algorithms: N-Step SCAN (n-SCAN), F-SCAN, and RSS (Rotational Scheduling).
+
+## Features
+
+- *N-Step SCAN Algorithm:* Simulates the N-Step SCAN disk scheduling algorithm.
+- *F-SCAN Algorithm:* Simulates the F-SCAN disk scheduling algorithm.
+- *RSS Algorithm:* Simulates the Rotational Scheduling (RSS) disk scheduling algorithm.
+
+## Description
+
+Disk scheduling algorithms are crucial components of operating systems responsible for optimizing the order in which disk I/O requests are serviced. This project provides a hands-on demonstration of three popular disk scheduling algorithms, allowing users to observe their behavior and understand their impact on system performance.
+
+## Getting Started
+
+### Prerequisites
+
+- Python (version X.X.X)
+- Jupyter Notebook or VS Code
+
+### Installation
+
+ Clone the repository to your local machine:
+
+   bash
+   git clone https://github.com/MuhammadBurhan12/Disk-Scheduling-Algorithm
+   
+
+ Navigate to the project directory:
+
+  bash
+   cd Disk-Scheduling-Algorithm
+   
+
+## Algorithms
+
+### 1. N-Step SCAN Algorithm
+
+The N-Step SCAN algorithm is a disk scheduling algorithm used to optimize the order in which I/O requests are serviced on a disk. It is an extension of the SCAN algorithm, which moves the disk arm in one direction, serving requests until it reaches the end of the disk, at which point it reverses direction.
+
+*Characteristics:*
+
+- *Movement:* The N-Step SCAN algorithm divides the disk into zones, and the disk arm moves in one direction servicing requests within the current zone for N steps before moving to the next zone.
+  
+- *Enhanced Locality:* By focusing on a limited number of zones in each pass, the algorithm exhibits enhanced locality of reference, reducing seek time.
+
+- *Fairness:* N-Step SCAN provides fairness by ensuring that requests in all zones receive service within a reasonable time frame.
+
+### 2. F-SCAN Algorithm
+
+The F-SCAN (Fast SCAN) algorithm is an enhancement of the SCAN algorithm, designed to reduce the high variance in response times observed in traditional SCAN algorithms.
+
+*Characteristics:*
+
+- *Multiple Queues:* F-SCAN maintains multiple request queues, and the disk arm services requests in a round-robin fashion across these queues.
+  
+- *Reduced Variance:* By servicing requests in a more balanced manner, F-SCAN reduces the variance in response times compared to traditional SCAN algorithms.
+
+- *Enhanced Responsiveness:* The algorithm ensures that each queue receives fair service, contributing to enhanced responsiveness and reduced waiting times.
+
+### 3. RSS Algorithm
+
+The Rotational Scheduling (RSS) algorithm is a disk scheduling approach that takes into account the rotational latency of a disk, aiming to minimize the time spent waiting for the desired disk sector to rotate under the disk arm.
+
+*Characteristics:*
+
+- *Rotational Latency Consideration:* RSS considers the rotational latency involved in waiting for the desired disk sector to rotate under the disk arm.
+  
+- *Optimized Sector Selection:* The algorithm optimizes the selection of disk sectors to minimize the overall rotational latency, contributing to improved disk access performance.
+
+- *Sequential Access Optimization:* RSS is particularly effective in scenarios where there is a degree of locality in data access patterns, optimizing sequential access to reduce rotational latency.
 
 RSS Scheduling Algorithm
 Description
